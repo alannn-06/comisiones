@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Comisiones</title>
+    <link rel="stylesheet" href="ventas.css">
+    <script src="ventas.js"></script>
+    <script src="utilitarios.js"></script>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Calculadora de Comisiones</h1>
+
+        <div class="grupo">
+            <label>Salario Base:</label>
+            <input type="text" id="txtSueldoBase">
+        </div>
+
+        <div class="grupo">
+            <label>Número de ventas:</label>
+            <input type="text" id="txtVentas">
+        </div>
+
+        <div class="grupo">
+            <label>Precio del producto:</label>
+            <input type="text" id="txtPrecio">
+        </div>
+
+        <button onclick="calcular()">Calcular Comisión</button>
+
+        <div class="resultados">
+            <h2>Resultados</h2>
+            <p>Salario Base: <span id="spSueldoBase"></span></p>
+            <p>Comisión: <span id="spComision"></span></p>
+            <p>Total: <span id="spTotal"></span></p>
+        </div>
+    </div>
+
+</body>
+</html>
