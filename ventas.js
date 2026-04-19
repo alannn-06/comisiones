@@ -27,6 +27,7 @@ function calcular() {
     
 
     //  Se convierte el texto a numero
+    
     let sueldoBase = recuperarFloat("txtSueldoBase");
     let numeroVentas = recuperarFloat("txtVentas");
     let precioProducto = recuperarFloat("txtPrecio");
@@ -41,4 +42,20 @@ function calcular() {
     spSueldoBase.textContent = sueldoBase;
     spComision.textContent = comision;
     spTotal.textContent = total;
+}
+
+function validarCampo(input) {
+    const valor = input.value.trim();
+    const errorDiv = document.getElementById("error_" + input.id);
+    let mensaje = "";
+
+    if (valor === "") {
+        mensaje = "Este campo no puede estar vacío";
+    } else if (!/^\d+$/.test(valor)) {
+        mensaje = "Solo se permiten números";
+    } else if (valor.length > 5) {
+        mensaje = "Máximo 5 dígitos permitidos";
+    }
+
+    errorDiv.textContent = mensaje;
 }
